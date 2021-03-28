@@ -3,3 +3,6 @@
 ################################################################################
 
 /AIMShipping/AIMShipping.ClientConsole/bin/Debug/netcoreapp3.1
+/AIMShipping/AIMShipping.ClientConsole/obj
+/AIMShipping/.vs/AIMShipping/v16
+/.vs

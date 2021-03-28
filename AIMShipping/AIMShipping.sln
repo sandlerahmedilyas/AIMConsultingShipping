@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMShipping.ClientConsole", "AIMShipping.ClientConsole\AIMShipping.ClientConsole.csproj", "{176F6140-892E-493D-BBBE-1F62F8684AA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{176F6140-892E-493D-BBBE-1F62F8684AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176F6140-892E-493D-BBBE-1F62F8684AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176F6140-892E-493D-BBBE-1F62F8684AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176F6140-892E-493D-BBBE-1F62F8684AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {528E2B31-1F27-482C-A2D2-727E5A4FC64C}
+	EndGlobalSection
+EndGlobal
