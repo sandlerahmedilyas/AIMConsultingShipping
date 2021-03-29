@@ -17,6 +17,6 @@ namespace AIM.Shipping.Contracts.Interfaces
         /// </summary>
         /// <param name="request">The request object</param>
         /// <returns>The response containing the shipping data information</returns>
-        Task<GetShippingStatusResponse> GetShippingStatus(GetShippingStatusRequest request);
+        Task<GetShippingStatusResponse> GetShippingStatusAsync(GetShippingStatusRequest request);
     }
 }

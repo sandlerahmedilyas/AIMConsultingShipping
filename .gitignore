@@ -24,3 +24,5 @@
 /AIMShipping/.vs/AIMShipping/DesignTimeBuild
 /AIMShipping/.vs/AIMShipping
 /AIMShipping/AIM.Shipping.Contracts/obj
+/AIMShipping/AIMShipping.Tests/bin/Debug/netcoreapp3.1
+/AIMShipping/AIMShipping.Tests/obj

@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMShipping.ClientConsole", "AIMShipping.ClientConsole\AIMShipping.ClientConsole.csproj", "{176F6140-892E-493D-BBBE-1F62F8684AA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIMShipping.ClientConsole", "AIMShipping.ClientConsole\AIMShipping.ClientConsole.csproj", "{176F6140-892E-493D-BBBE-1F62F8684AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.Shipping.Contracts", "AIM.Shipping.Contracts\AIM.Shipping.Contracts.csproj", "{4177ACA8-39AB-41BF-B477-D26A1F54EE04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIM.Shipping.Contracts", "AIM.Shipping.Contracts\AIM.Shipping.Contracts.csproj", "{4177ACA8-39AB-41BF-B477-D26A1F54EE04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.Shipping.Models", "AIM.Shipping.Models\AIM.Shipping.Models.csproj", "{EF8D82A9-64C1-45EC-9A13-CB637D613EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIM.Shipping.Models", "AIM.Shipping.Models\AIM.Shipping.Models.csproj", "{EF8D82A9-64C1-45EC-9A13-CB637D613EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.Shipping.Implementation", "AIM.Shipping.Implementation\AIM.Shipping.Implementation.csproj", "{93A5CAEF-28A9-4862-A8D6-86B601E4881E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIM.Shipping.Implementation", "AIM.Shipping.Implementation\AIM.Shipping.Implementation.csproj", "{93A5CAEF-28A9-4862-A8D6-86B601E4881E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMShipping.Configuration", "AIMShipping.Configuration\AIMShipping.Configuration.csproj", "{D2E46464-8B6C-4E96-9AD7-09A572172CFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIMShipping.Configuration", "AIMShipping.Configuration\AIMShipping.Configuration.csproj", "{D2E46464-8B6C-4E96-9AD7-09A572172CFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.Common", "AIM.Common\AIM.Common.csproj", "{BABC4E08-40F8-488F-B9BA-A532C49D18B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIM.Common", "AIM.Common\AIM.Common.csproj", "{BABC4E08-40F8-488F-B9BA-A532C49D18B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMShipping.Tests", "AIMShipping.Tests\AIMShipping.Tests.csproj", "{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{BABC4E08-40F8-488F-B9BA-A532C49D18B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BABC4E08-40F8-488F-B9BA-A532C49D18B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BABC4E08-40F8-488F-B9BA-A532C49D18B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

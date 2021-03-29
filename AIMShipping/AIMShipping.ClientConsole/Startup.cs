@@ -35,6 +35,7 @@ namespace AIMShipping.ClientConsole
             });
 
             serviceCollection.AddOptions();
+            
             serviceCollection.Configure<ShippingServiceClientConfiguration>(configuration.GetSection("ShippingServiceClientConfiguration")); // let's bind the settings to the class and inject it in wherever required
 
             serviceCollection.AddSingleton(resolver => resolver.GetRequiredService<IOptions<ShippingServiceClientConfiguration>>().Value);

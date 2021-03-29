@@ -31,7 +31,7 @@ namespace AIMShipping.ClientConsole
         public async Task Run(string[] args)
         {
             // Let's call our shipping service method and get a response and display it on the console
-            var response = await this._shippingClient.GetShippingStatus(new GetShippingStatusRequest { });
+            var response = await this._shippingClient.GetShippingStatusAsync(new GetShippingStatusRequest { });
             if (!response.Success)
             {
                 this._logger.LogError($"Service call was not successful. Error message: {response.FailureInformation}");
@@ -40,6 +40,10 @@ namespace AIMShipping.ClientConsole
             {
                 this._logger.LogInformation("Service call returned the following information:");
                 this._logger.LogInformation($"Ship date: {response.ShippingDataInformation.ShipDate}");
+                if (!response.ShippingDataInformation.ShipDate.HasValue)
+                {
+                    this._logger.LogInformation("There was no shipping data found!!");
+                }
             }
 
         }
