@@ -39,15 +39,15 @@
             if (shippingClientFactory == null)
             {
                 throw new ArgumentNullException(nameof(shippingClientFactory), "A non null HTTP client factory must be supplied");
-            }
-
-            this.Client = shippingClientFactory.CreateClient(StringConstants.ShippingHTTP_NamedClient);
-            this.Client.BaseAddress = new Uri(this._shippingConfig.EndpointUrl);        
+            }   
 
             if (string.IsNullOrWhiteSpace(config.EndpointUrl))
             {
                 throw new ArgumentNullException(nameof(config.EndpointUrl), "Endpoint URL must be supplied which calls the service");
             }
+
+            this.Client = shippingClientFactory.CreateClient(StringConstants.ShippingHTTP_NamedClient);
+            this.Client.BaseAddress = new Uri(this._shippingConfig.EndpointUrl);
         }
 
 
