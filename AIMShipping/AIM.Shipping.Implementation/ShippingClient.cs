@@ -18,7 +18,6 @@
     public sealed class ShippingClient : IShippingClient
     {
         private readonly ShippingServiceClientConfiguration _shippingConfig = null;
-        private readonly IHttpClientFactory _clientFactory = null;
         private readonly ILogger _logger = null;
 
         /// <summary>
@@ -37,9 +36,12 @@
         {
             this._logger = logger ?? throw new ArgumentNullException(nameof(logger), "A non null logger must be supplied");
             this._shippingConfig = config ?? throw new ArgumentNullException(nameof(config), "A non null config must be supplied");
-            this._clientFactory = shippingClientFactory ?? throw new ArgumentNullException(nameof(shippingClientFactory), "A non null HTTP client must be supplied");
+            if (shippingClientFactory == null)
+            {
+                throw new ArgumentNullException(nameof(shippingClientFactory), "A non null HTTP client factory must be supplied");
+            }
 
-            this.Client = this._clientFactory.CreateClient(StringConstants.ShippingHTTP_NamedClient);
+            this.Client = shippingClientFactory.CreateClient(StringConstants.ShippingHTTP_NamedClient);
             this.Client.BaseAddress = new Uri(this._shippingConfig.EndpointUrl);        
 
             if (string.IsNullOrWhiteSpace(config.EndpointUrl))
