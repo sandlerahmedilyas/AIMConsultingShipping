@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace AIMShipping.Tests
+﻿namespace AIMShipping.Tests
 {
+    using System.Net.Http;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     public sealed class FakeHttpMessageHandler : DelegatingHandler
     {
         private HttpResponseMessage _fakeResponse;

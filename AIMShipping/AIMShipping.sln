@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIMShipping.Configuration",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIM.Common", "AIM.Common\AIM.Common.csproj", "{BABC4E08-40F8-488F-B9BA-A532C49D18B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMShipping.Tests", "AIMShipping.Tests\AIMShipping.Tests.csproj", "{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIMShipping.Tests", "AIMShipping.Tests\AIMShipping.Tests.csproj", "{C7DB1730-68F8-4836-97FB-FBF0A904FAE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

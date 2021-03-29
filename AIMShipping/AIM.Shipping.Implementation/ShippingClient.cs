@@ -1,20 +1,17 @@
-﻿using AIM.Common;
-using AIM.Shipping.Contracts.Interfaces;
-using AIM.Shipping.Contracts.RnR;
-using AIM.Shipping.Models;
-using AIMShipping.Configuration;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace AIM.Shipping.Implementation
+﻿namespace AIM.Shipping.Implementation
 {
+    using AIM.Common;
+    using AIM.Shipping.Contracts.Interfaces;
+    using AIM.Shipping.Contracts.RnR;
+    using AIM.Shipping.Models;
+    using AIMShipping.Configuration;
+    using Microsoft.Extensions.Logging;
+    using System;
+    using System.Net.Http;
+    using System.Net.Http.Json;
+    using System.Text.Json;
+    using System.Threading.Tasks;
+
     /// <summary>
     /// Class which acts as a wrapper/self contained to call the necessary services to interact with it.
     /// </summary>
@@ -58,11 +55,11 @@ namespace AIM.Shipping.Implementation
             {
                 // always get a new client. Under the hood, the DelegatingHandler is managed by the runtime in .NET core better so no change of port exhaustion or stale DNS entries.
                 using (var client = this.GetHTTPClient())
-                {
+                {                    
                     using (var httpResp = await client.GetAsync(this._shippingConfig.EndpointUrl))
                     {
                         httpResp.EnsureSuccessStatusCode();
-
+                        
                         // parse the output.
                         // in this case I know what my data model is. Same properties but the data returning from the service as a JSON is a different casing,
                         // so let's specify the formatter properties
@@ -70,8 +67,8 @@ namespace AIM.Shipping.Implementation
                         {
                             PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                         };
-                        var stringData = await httpResp.Content.ReadAsStringAsync();
-                        response.ShippingDataInformation = JsonSerializer.Deserialize<ShippingDataModel>(stringData, serializerOptions);
+
+                        response.ShippingDataInformation = await httpResp.Content.ReadFromJsonAsync<ShippingDataModel>(serializerOptions);
                         response.Success = true;
                     }
                 }
@@ -81,6 +78,7 @@ namespace AIM.Shipping.Implementation
                 // There is a problem so log it and then return the response object back to the caller with a nice message that there was a problem.
                 this._logger.LogError(ex.ToString());
                 response.Success = false;
+                response.IsExternalError = true;
                 response.FailureInformation = "There was an error during calling the service. Please try again later";
             }
             catch(Exception ex)
@@ -102,7 +100,7 @@ namespace AIM.Shipping.Implementation
         {
             var client = this._clientFactory.CreateClient(StringConstants.ShippingHTTP_NamedClient);
             client.BaseAddress = new Uri(this._shippingConfig.EndpointUrl);
-
+            
             return client;
         }
     }

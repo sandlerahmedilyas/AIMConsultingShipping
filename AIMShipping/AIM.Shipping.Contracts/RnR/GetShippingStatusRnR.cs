@@ -1,10 +1,7 @@
-﻿using AIM.Shipping.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AIM.Shipping.Contracts.RnR
+﻿namespace AIM.Shipping.Contracts.RnR
 {
+    using AIM.Shipping.Models;
+
     public sealed class GetShippingStatusRequest : BaseRequest
     {
 
@@ -14,5 +11,6 @@ namespace AIM.Shipping.Contracts.RnR
     {
         public ShippingDataModel ShippingDataInformation { get; set; }
 
+        public bool IsExternalError { get; set; }
     }
 }

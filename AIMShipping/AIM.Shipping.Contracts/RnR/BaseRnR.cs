@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AIM.Shipping.Contracts.RnR
+﻿namespace AIM.Shipping.Contracts.RnR
 {
     public class BaseRequest
     {

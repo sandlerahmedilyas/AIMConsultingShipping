@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace AIM.Shipping.Models
+﻿namespace AIM.Shipping.Models
 {
+    using System;
+
     /// <summary>
     /// Simple data class that represents the data model in question.
     /// </summary>

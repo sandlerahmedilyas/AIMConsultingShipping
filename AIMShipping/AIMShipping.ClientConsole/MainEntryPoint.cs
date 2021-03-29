@@ -1,13 +1,11 @@
-﻿using AIM.Shipping.Contracts.Interfaces;
-using AIM.Shipping.Contracts.RnR;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AIMShipping.ClientConsole
+﻿namespace AIMShipping.ClientConsole
 {
+    using AIM.Shipping.Contracts.Interfaces;
+    using AIM.Shipping.Contracts.RnR;
+    using Microsoft.Extensions.Logging;
+    using System;
+    using System.Threading.Tasks;
+
     /// <summary>
     /// Abstracted away but also easier to port over to another platform/host if needed
     /// This class is the actual main entry point of the application
@@ -45,7 +43,6 @@ namespace AIMShipping.ClientConsole
                     this._logger.LogInformation("There was no shipping data found!!");
                 }
             }
-
         }
     }
 }

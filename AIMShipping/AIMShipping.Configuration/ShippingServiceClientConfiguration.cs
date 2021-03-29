@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AIMShipping.Configuration
+﻿namespace AIMShipping.Configuration
 {
     public sealed class ShippingServiceClientConfiguration
     {
